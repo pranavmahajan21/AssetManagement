@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/taskHeader_TV"
+            style="@style/TV_headers"
+            android:text="TASK HEADER" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            layout="@layout/task_header_details" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/taskDetailsHeader_TV"
+                style="@style/TV_headers"
+                android:text="TASK DETAILS" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_alignBottom="@+id/taskDetailsHeader_TV"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/refresh2" />
+            <!-- if you want height to be same as width use scaleType & adjustViewBounds instead of scale -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_bg_blue_stroke_radius"
+            android:padding="20dp" >
+
+            <ListView
+                android:id="@+id/taskDetails_LV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/notification_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No task details"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

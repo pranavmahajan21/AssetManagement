@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="20dp"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/taskHeader_TV"
+        style="@style/TV_headers"
+        android:text="TASKS" />
+
+    <ListView
+        android:id="@+id/tasks_LV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskHeader_TV"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_bg_blue_stroke_radius"
+        android:padding="20dp" />
+
+</RelativeLayout>
